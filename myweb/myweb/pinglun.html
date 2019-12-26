@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/pinglun.css">
+		<script type="text/javascript" src="js/pinglun.js"></script>
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+			<div id="app" class="jumbotron">
+			<div class="container">
+				<form class="form">
+					<label for="pinglunqu" class="text-lg">评论：</label>
+					<textarea id="pinglunqu" placeholder="请输入您对我们网页的评论建议!" class="input input-lg form-control" v-model="newpinglun"></textarea>
+				</form>
+				
+				<input type="button" class="input input-lg btn-success" value="确认" style="float: right;" v-on:click="getpinglun"/>
+				<button class="input input-lg btn-danger" style="float: right;"><a href="index.html" style="color: white;">返回</a></button>
+				<br>
+				<br>
+				<br>
+				<input type="button" class="input input-lg" value="显示/隐藏所有评论" style="float: left;" onclick="show()"/>
+				<input type="button" class="input input-lg" value="搜索评论" style="float: left;" data-toggle="modal" data-target=".searchModal"/>
+				<br>
+				<br>
+				<br>
+				<br>
+				<div id="showall">
+					<ul v-for="onepinglun in pinglun">
+						<li>{{onepinglun}}</li>
+					</ul>
+				</div>
+			</div>
+			
+			<div>
+				<div class="modal fade searchModal" tabindex="-1" role="dialog" aria-labelledby="seachModalLabel" aria-hidden="true">
+				    <div class="modal-dialog">
+				        <div class="modal-content">
+				            <div class="modal-header">
+				                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				                <h4 class="modal-title" id="myModalLabel">输入您要搜索的评论内容：</h4>
+				            </div>
+				            <div class="modal-body">
+						     	   <input type="text" class="input input-lg form-control" v-on:input="searchsousuo" v-model="searchneirong"/>
+								   <br>
+								   <table id="table1" class="table table-hover table-striped table-border">
+									   <tr v-for="sea in souarr" >
+									   		<td>{{sea}}</td>
+											<td><a id="searchid" onclick="deletethis(this.id)">delete</a></td>
+									   </tr>
+								   </table>
+							</div>
+				            <div class="modal-footer">
+				                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+				            </div>
+				        </div><!-- /.modal-content -->
+				    </div><!-- /.modal -->
+				</div>
+			</div>
+			
+			<footer id="jiewei">
+				制作人：荷尼<br>
+				联系地址：佛山科学技术学院B3-309<br>
+				联系电话：12345678910
+			</footer>
+			
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/canvas.js"></script>
+		<title></title>
+	</head>
+	<body>
+		<div style="width:100%;border: 2px solid black;">
+			<canvas id="canvahuaban" width="1700px" height="950px" style="border: 1px solid grey;" ></canvas>
+			<div  style="width: 190px;height: 800px; float: right;padding: 30px;" class="btn-group-vertical">
+				<input id="pencilcanvas" type="button" value="画笔" class="pull-left btn btn-success"/>
+				<input id="cachucanvas" type="button" value="擦除" class="pull-left btn btn-success"/>
+				<input id="clearcanvas" type="button" value="清空" class="pull-left btn btn-success"/>
+				<button id="colorcanvas" type="button" value="颜色" class="pull-left btn btn-success">颜色
+				    <select id="selectcolor">
+						<option class="text-muted" value="black">黑色</option>
+						<option class="text-muted" value="red">红色</option>
+						<option class="text-muted" value="green">绿色</option>
+						<option class="text-muted" value="blue">蓝色</option>
+						<option class="text-muted" value="yellow">黄色</option>
+						<option class="text-muted" value="purple">紫色</option>
+						<option class="text-muted" value="white">白色</option>
+					</select>
+				</button>
+				<button type="button" value="粗细" class="pull-left btn btn-success">粗细
+					<select id="widthcanvas">
+						<option class="text-muted" value="one">1</option>
+						<option class="text-muted" value="two">2</option>
+						<option class="text-muted" value="three">3</option>
+						<option class="text-muted" value="four">4</option>
+						<option class="text-muted" value="five">5</option>
+						<option class="text-muted" value="six">6</option>
+					</select>
+				</button>
+				<input id="onerectcanvas" type="button" value="长方形" class="pull-left btn btn-success"/>
+				<input id="onearccanvas" type="button" value="圆形" class="pull-left btn btn-success"/>
+				<input id="rectcanvas" type="button" value="长方形填充" class="pull-left btn btn-success"/>
+				<input id="arccanvas" type="button" value="圆形填充" class="pull-left btn btn-success"/>
+				<input id="rectnew" type="button" value="长方形艺术效果" class="pull-left btn btn-success"/>
+				<input id="arcnew" type="button" value="圆形艺术效果" class="pull-left btn btn-success"/>
+				<button  value="返回" class="pull-left btn btn-muted"><a href="index.html">返回</a></button>
+			</div>
+			
+			
+			
+		</div>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+#pinglunqu{
+	margin: 10px;
+}
+
+#showall{
+	display: none;
+	clear: both;
+}
+
+#table1{
+	text-align: center;
+}
+
+.jumbotron{
+	height: 900px;
+	position: relative;
+}
+
+#showall{
+	height: 300px;
+	overflow: scroll;
+	border: 2px solid grey;
+	padding: 20px 0px;
+}
+
+	
+#jiewei{
+	width:300px;
+	position: fixed;
+	top:700px;
+	left: 200px;
+}

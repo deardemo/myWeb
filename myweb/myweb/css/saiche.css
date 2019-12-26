@@ -1,0 +1,48 @@
+#mysaiche{
+	width: 800px;
+	height: 700px;
+	border: 1px solid grey;
+	margin: auto;
+	box-sizing: border-box;
+}
+
+.container{
+	margin-top: 50px;
+}
+
+#saichetable{
+	width: 800px;
+	height: 650px;
+		box-sizing: border-box;
+}
+
+#saichetable td{
+	border: 1px solid grey;
+	background-color: white;
+}
+
+#saichebtn{
+	float: right;
+}
+
+#backimg{
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size:100% auto;
+}
+
+#pubu{
+	width: 100%;
+	height: 50px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.pubudiv{
+	width: 3%;
+	height: 70px;
+	border: 1px solid gray;
+}
+
+

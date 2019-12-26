@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+		<script src="js/index.js"></script>
+		<link rel="stylesheet" href="css/index.css">
+	    <title></title>
+	</head>
+	<body>
+		<div id="app">
+			<!-- <imgNav></imgNav> -->
+			<div id="myCarousel" class="carousel slide">
+			    <!-- 轮播（Carousel）指标 -->
+			    	<ul class="carousel-indicators">
+			    	    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			    	    <li data-target="#myCarousel" data-slide-to="1"></li>
+			    	    <li data-target="#myCarousel" data-slide-to="2"></li>
+			    		<li data-target="#myCarousel" data-slide-to="3"></li>
+			    		<li data-target="#myCarousel" data-slide-to="4"></li>
+						<li data-target="#myCarousel" data-slide-to="5"></li>
+						<li data-target="#myCarousel" data-slide-to="6"></li>
+			    	</ul>   
+			    <!-- 轮播（Carousel）项目 -->
+			    <div class="carousel-inner" >
+			        <div class="item active">
+			            <a href="https://web.fosu.edu.cn/"><img src="img/toubu9.jpg" alt="First slide" class="carimg"></a>
+			            <div class="carousel-caption">佛山科学技术学院</div>
+			        </div>
+			        <div class="item">
+			            <a href="saiche.html"><img src="img/fangkuai.jpg" alt="Second slide" class="carimg"></a>
+			            <div class="carousel-caption">躲避方块</div>
+			        </div>
+			        <div class="item">
+			            <a href="mybrits.html"><img src="img/btris.jpg" alt="Third slide" class="carimg"></a>
+			            <div class="carousel-caption">俄罗斯方块</div>
+			        </div>
+					<div class="item">
+					    <a href="tanchi.html"><img src="img/tanchishe2.jpg" alt="Forth slide" class="carimg"></a>
+					    <div class="carousel-caption">贪吃蛇</div>
+					</div>
+					<div class="item">
+					    <a href="pinglun.html"><img src="img/pinglun.jpg" alt="Fifth slide" class="carimg"></a>
+					    <div class="carousel-caption">评论</div>
+					</div>
+					<div class="item">
+						<a href="canvas.html"><img src="img/huaban.jpg" alt="Sixth slide" class="carimg"></a>
+						<div class="carousel-caption" >画板</div>
+					</div>
+					<div class="item">
+						<a href="yinhe.html"><img src="img/yinh.png" alt="Seventh slide" class="carimg"></a>
+						<div class="carousel-caption" >银河系</div>
+					</div>
+			    </div>
+			    <!-- 轮播（Carousel）导航 -->
+			    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+			        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			        <span class="sr-only">Previous</span>
+			    </a>
+			    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+			        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			        <span class="sr-only">Next</span>
+			    </a>
+			</div>
+			<ul class="nav nav-tabs nav-justified">
+				<li class="active"><a href="#index" data-toggle="tab">首页</a></li>
+				<li><a href="#buy" data-toggle="tab">购物车</a></li>
+				<li><a href="#shipin" data-toggle="tab">弹幕</a></li>
+				<li><a href="#com" data-toggle="tab">计算机</a></li>
+				<li><a href="#pin" data-toggle="tab" v-on:click="getnum">拼图游戏</a></li>
+				<li><a href="#rili" data-toggle="tab">日历</a></li>
+				<li><a href="#lightbox" data-toggle="tab">灯箱+跑马灯</a></li>
+				<li><a href="#whitebox" data-toggle="tab">别踩白块</a></li>
+			</ul>
+			<!-- //使用tab-content和tab-pane配合形成各个标签页 -->
+			<div class="jumbotron">
+				<div class="container">
+					<div id="myTabContent" class="tab-content">
+						<!-- 首页 -->
+						<div class="tab-pane fade in active" id="index">
+							<br><br>
+							<div class="row">
+							    <div class="col-sm-6 col-md-3" data-toggle="modal" data-target="#myModal">
+							        <a href="#" class="thumbnail">
+							            <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=198343993,3194702193&fm=26&gp=0.jpg"
+							                 alt="通用的占位符缩略图">
+							        </a>
+							    </div>
+							    <div class="col-sm-6 col-md-3" data-toggle="modal" data-target="#myModal">
+							        <a href="#" class="thumbnail">
+							            <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=198343993,3194702193&fm=26&gp=0.jpg"
+							                 alt="通用的占位符缩略图">
+							        </a>
+							    </div>
+							    <div class="col-sm-6 col-md-3" data-toggle="modal" data-target="#myModal">
+							        <a href="#" class="thumbnail">
+							            <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=198343993,3194702193&fm=26&gp=0.jpg"
+							                 alt="通用的占位符缩略图">
+							        </a>
+							    </div>
+							    <div class="col-sm-6 col-md-3" data-toggle="modal" data-target="#myModal">
+							        <a href="#" class="thumbnail">
+							            <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=198343993,3194702193&fm=26&gp=0.jpg"
+							                 alt="通用的占位符缩略图">
+							        </a>
+							    </div>
+							</div>
+							<div class="row">
+							    <div class="col-sm-6 col-md-3" data-toggle="modal" data-target="#myModal">
+							        <a href="#" class="thumbnail">
+							            <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=198343993,3194702193&fm=26&gp=0.jpg"
+							                 alt="通用的占位符缩略图">
+							        </a>
+							    </div>
+							    <div class="col-sm-6 col-md-3" data-toggle="modal" data-target="#myModal">
+							        <a href="#" class="thumbnail">
+							            <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=198343993,3194702193&fm=26&gp=0.jpg"
+							                 alt="通用的占位符缩略图">
+							        </a>
+							    </div>
+							    <div class="col-sm-6 col-md-3" data-toggle="modal" data-target="#myModal">
+							        <a href="#" class="thumbnail">
+							            <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=198343993,3194702193&fm=26&gp=0.jpg"
+							                 alt="通用的占位符缩略图">
+							        </a>
+							    </div>
+							    <div class="col-sm-6 col-md-3" data-toggle="modal" data-target="#myModal">
+							        <a href="#" class="thumbnail">
+							            <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=198343993,3194702193&fm=26&gp=0.jpg"
+							                 alt="通用的占位符缩略图">
+							        </a>
+							    </div>
+							</div>
+							
+							<!-- 模态框（Modal） -->
+							<div>
+								<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+													&times;
+												</button>
+												<h4 class="modal-title" id="myModalLabel">
+													欢迎抽取幸运数字！
+												</h4>
+											</div>
+											<div class="modal-body">
+												您抽取到的数字是：{{lunckNum}}
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+												</button>
+												<button type="button" class="btn btn-primary" data-dismiss="modal" v-on:click="getlunck">
+													提交数字
+												</button>
+											</div>
+										</div><!-- /.modal-content -->
+									</div><!-- /.modal -->
+								</div>
+							</div>
+						</div>
+						<!-- 首页完 -->
+						<!-- 购物车 -->
+						<div class="tab-pane fade" id="buy">
+							<form id="main">
+							    <div class="bar">
+							        <!-- searchString 模型与文本域创建绑定 -->
+							
+							        <input type="text" v-model="searchString" placeholder="输入搜索内容" />
+							    </div>
+							
+							   <div id="goods">
+								   <ul>
+								       <!-- 循环输出数据 -->
+								       <li class="media" v-for="article in filteredArticles">
+								           <a v-bind:href="article.url"><img v-bind:src="article.image" /></a>
+											   <p>{{article.title}}</p>
+											     
+											   <div id="change">
+												   <span>单价：{{article.money | fil}}</span>
+												   <input type="button" value="-" v-on:click="article.count--"/>
+												   <input class="input-sm" type="text" v-model="article.count" />
+												   <input type="button" value="+" v-on:click="article.count++"/>
+											   </div>
+								       </li>
+								   </ul>
+							   </div>
+							   <br>
+							   总价：<span>{{getsum | fil}}</span>
+							</form>
+							<br>
+							<br>
+							<!-- 按钮触发模态框 -->
+							<button v-on:click="getinfo" class="btn btn-primary btn-lg" data-toggle="modal" data-target=".buyModal">查看选购详情</button>
+							<!-- 模态框（Modal） 需要多次使用模态框时在每个模态框外层包裹一个div就能正常切换了-->
+							<div>
+								<div class="modal fade buyModal" tabindex="-1" role="dialog" aria-labelledby="buyModalLabel" aria-hidden="true">
+								    <div class="modal-dialog">
+								        <div class="modal-content">
+								            <div class="modal-header">
+								                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+								                <h4 class="modal-title" id="myModalLabel">订单详情</h4>
+								            </div>
+								            <div class="modal-body">
+										     	   <table class="table table-striped table-bordered table-hover table-condensed">
+										     	     <caption>订单列表：</caption>
+										     	     <thead>
+										     	       <tr>
+										     	         <th>单品名字</th>
+										     	         <th>单价</th>
+										     			 <th>订单数量</th>
+										     			 <th>清除</th>
+										     	       </tr>
+										     	     </thead>
+										     	     <tbody>
+										     	       <tr v-for="detail in info">
+										     	         <td>{{detail.name}}</td>
+										     	         <td>{{detail.money}}</td>
+										     			 <td>{{detail.count}}</td>
+										     			 <td><a v-on:click="detail.count=0">delete</a></td>
+										     	       </tr>
+										     	     </tbody>
+										     	   </table>
+												</div>
+								            <div class="modal-footer">
+								                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+								            </div>
+								        </div><!-- /.modal-content -->
+								    </div><!-- /.modal -->
+								</div>
+							</div>
+						</div>
+						<!-- 购物车完 -->
+						<!-- 进度条 -->
+						<div class="tab-pane fade " id="shipin">
+							<div style="margin:auto;width:900px;" class="shipin">
+								<div id="barrageplayer">
+								    <canvas id="cv_video" width="900px" height="450px"></canvas>
+								    <!-- <video id="v_video" src="http://www.tools4movies.com/trailers/1012/Despicable%20Me%202.mp4" controls type="video/mp4"></video> -->
+									<video id="v_video" src="https://www.runoob.com/try/demo_source/mov_bbb.mp4" controls type="video/mp4"></video>
+								</div>
+								<div id="barrageinput">
+								    <div style="padding: 2px;">
+								        <input type="text" id="smsg" placeholder="请输入弹幕内容" class="input"/>
+								        <button id="send" class="btn-success"> 发送</button>
+										<button id="showall" class="btn-info pull-right">显示所有</button>
+										<button id="clear" class="btn-danger pull-right">清除弹幕</button>
+								    </div>
+								    <div id="colorpick">
+										<div class="pickdiv" id="black"></div>
+								        <div class="pickdiv" id="white"></div>
+								        <div class="pickdiv" id="red"></div>
+								        <div class="pickdiv" id="yellow"></div>
+								        <div class="pickdiv" id="blue"></div>
+								        <div class="pickdiv" id="green"></div>
+								    </div>
+								    <div id="typepick">
+								        <input type="radio" name="type" value="default">默认
+								        <input type="radio" name="type" value="static top">静止顶部 
+								        <input type="radio" name="type" value="static bottom">静止底部
+								    </div>
+								    <div id="speedpick">
+								        <input type="radio" name="speed" value="1">X1
+								        <input type="radio" name="speed" value="2">X2
+								        <input type="radio" name="speed" value="3">X3
+								    </div>
+									<div id="sizepick">
+									    <input type="radio" name="size" value="10">10px
+									    <input type="radio" name="size" value="20">20px
+									    <input type="radio" name="size" value="30">30px
+									</div>
+								    <div id="stylepick"></div>
+								</div>
+							</div>
+						</div>
+						<!-- 进度条完 -->
+						<!-- 计算机 -->
+						<div class="tab-pane fade" id="com">
+							<div class="all">
+								<div class="show">
+									<input id="shownum" class="shownum" type="text" value="0"></input>
+								</div>
+								<div class="center">
+									<div class="left">
+										<div class="up">
+											<input class="btn" type="button" value="CALL" onclick="clearall();"></input>
+											<input class="btn" type="button" value="CONE" onclick="clearone();"></input>
+											<input class="btn" type="button" value="%" onclick="getnum(this.value);"></input>
+										</div>
+										<div class="down">
+											<div class="num">
+												<input class="btn" type="button" value="7" onclick="getnum(this.value);"></input>
+												<input class="btn" type="button" value="8" onclick="getnum(this.value);"></input>
+												<input class="btn" type="button" value="9" onclick="getnum(this.value);"></input>
+											</div>
+											<div class="num">
+												<input class="btn" type="button" value="4" onclick="getnum(this.value);"></input>
+												<input class="btn" type="button" value="5" onclick="getnum(this.value);"></input>
+												<input class="btn" type="button" value="6" onclick="getnum(this.value);"></input>
+											</div>
+											<div class="num">
+												<input class="btn" type="button" value="1" onclick="getnum(this.value);"></input>
+												<input class="btn" type="button" value="2" onclick="getnum(this.value);"></input>
+												<input class="btn" type="button" value="3" onclick="getnum(this.value);"></input>
+											</div>
+										</div>
+									</div>
+									<div class="right">
+										<input class="btn" type="button" value="/" onclick="getnum(this.value);"></input>
+										<input class="btn" type="button" value="*" onclick="getnum(this.value);"></input>
+										<input class="btn" type="button" value="-" onclick="getnum(this.value);"></input>
+										<input class="btn" type="button" value="+" onclick="getnum(this.value);"></input>
+									</div>
+								</div>
+								<div class="footer">
+									<div class="four">
+										<input class="btn" type="button" value="exit"></input>
+										<input class="btn" type="button" value="0" onclick="getnum(this.value);"></input>
+										<input class="btn" type="button" value="." onclick="getnum(this.value);"></input>
+										<input class="btn" type="button" value="=" onclick="getresult()"></input>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 计算机完 -->
+						<!-- 拼图游戏 -->
+						<div class="tab-pane fade" id="pin">
+							<div id="kuang">
+								<div id="tu1" class="tu" onclick="pintu(this)">{{num[0]}}</div>
+								<div id="tu2" class="tu" onclick="pintu(this)">{{num[1]}}</div>
+								<div id="tu3" class="tu" onclick="pintu(this)">{{num[2]}}</div>
+								<div id="tu4" class="tu" onclick="pintu(this)">{{num[3]}}</div>
+								<div id="tu5" class="tu" onclick="pintu(this)">{{num[4]}}</div>
+								<div id="tu6" class="tu" onclick="pintu(this)">{{num[5]}}</div>
+								<div id="tu7" class="tu" onclick="pintu(this)">{{num[6]}}</div>
+								<div id="tu8" class="tu" onclick="pintu(this)">{{num[7]}}</div>
+								<div id="empty" class="tu"></div>
+							</div>
+						</div>
+						<!-- 拼图游戏完 -->
+						<!-- 日历 -->
+						<div class="tab-pane fade" id="rili">
+							<div id="rilikuang">
+								<table class="table table-striped table-bordered table-hover table-condensed">
+								  <caption style="font-size: larger;"><center>日历：</center></caption>
+								  <br>
+								    <tr>
+								      <th>周一</th>
+									  <th>周二</th>
+									  <th>周三</th>
+									  <th>周四</th>
+									  <th>周五</th>
+									  <th>周六</th>
+									   <th>周日</th>
+								    </tr>
+								    <tr class="rilitr">
+									  <td class="rilitd"></td>
+									  <td class="rilitd"></td>
+									  <td class="rilitd"></td>
+									  <td class="rilitd"></td>
+									  <td class="rilitd"></td>
+									  <td class="rilitd"></td>
+								      <td class="rilitd"></td>
+								    </tr>
+									<tr class="rilitr">
+									  <td class="rilitd"></td>
+									  <td class="rilitd"></td>
+									  <td class="rilitd"></td>
+									  <td class="rilitd"></td>
+									  <td class="rilitd"></td>
+									  <td class="rilitd"></td>
+									  <td class="rilitd"></td>
+									</tr>
+									<tr class="rilitr">
+									  <td class="rilitd"></td>
+									  <td class="rilitd"></td>
+									  <td class="rilitd"></td>
+									  <td class="rilitd"></td>
+									  <td class="rilitd"></td>
+									  <td class="rilitd"></td>
+									  <td class="rilitd"></td>
+									</tr>
+									<tr class="rilitr">
+									  <td class="rilitd"></td>
+									  <td class="rilitd"></td>
+									  <td class="rilitd"></td>
+									  <td class="rilitd"></td>
+									  <td class="rilitd"></td>
+									  <td class="rilitd"></td>
+									  <td class="rilitd"></td>
+									</tr>
+									<tr class="rilitr">
+									  <td class="rilitd"></td>
+									  <td class="rilitd"></td>
+									  <td class="rilitd"></td>
+									  <td class="rilitd"></td>
+									  <td class="rilitd"></td>
+									  <td class="rilitd"></td>
+									  <td class="rilitd"></td>
+									</tr>
+									<tr class="rilitr">
+									  <td class="rilitd"></td>
+									  <td class="rilitd"></td>
+									  <td class="rilitd"></td>
+									  <td class="rilitd"></td>
+									  <td class="rilitd"></td>
+									  <td class="rilitd"></td>
+									  <td class="rilitd"></td>
+									</tr>
+								</table>
+								<input id="rilibtn" type="button" v-on:click="getrili()" value="点击获取日历" />
+								<input id="rilibtn" type="button"  data-toggle="modal" data-target=".riliModal"  value="点击获取今天天气详情" />
+								<!-- 模态框（Modal） 需要多次使用模态框时在每个模态框外层包裹一个div就能正常切换了-->
+								<div>
+									<div class="modal fade riliModal" tabindex="-1" role="dialog" aria-labelledby="buyModalLabel" aria-hidden="true">
+									    <div class="modal-dialog  modal-lg">
+									        <div class="modal-content">
+									            <div class="modal-header">
+									                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+									                <h4 class="modal-title" id="myModalLabel">天气查询</h4>
+									            </div>
+									                <div class="modal-body">
+														<form action="" onsubmit="return false;">
+														    <input type="text" name="" id="city" placeholder="请输入城市···">
+														    <input type="submit" value="搜索" id="search" v-on:click="gettianqi()">
+														</form>
+									                    <p>时间：{{ weatherData.date }}</p>
+									                     
+									                    <p>提示：{{ weatherData.status }}</p>
+									                     
+									                    <p>错误：{{ weatherData.error }}</p>
+														
+														
+														
+														
+														<div v-for="item in weatherDataresults">
+														 
+														   <p>地区：{{ item.currentCity }}</p>
+														    <p>PM2.5:{{ item.pm25 }}</p>
+														 
+														  <ul v-for="item1 in item.index">
+															  <li>{{ item1.tipt }}:{{ item1.title }}{{ item1.zs }}</li>
+														       <li>{{ item1.des }}</li>
+														        <br>
+														  </ul>
+															<!-- <ul>
+															     <li>{{ item.index[0].des }}</li>
+															     <li>{{ item.index[0].tipt }}</li>
+															     <li>{{ item.index[0].title }}</li>
+															     <li>{{ item.index[0].zs }}</li>
+															 </ul> -->
+														 
+														 
+														    <ul v-for="item2 in item.weather_data">
+														        <li>{{ item2.date }}</li>
+														        <li>
+														            <img v-bind:src="item2.dayPictureUrl" alt="" style="margin-right: 15px;">
+																	<div >
+																		温度：{{ item2.temperature }}<br>天气：{{ item2.weather }}<br>风力：{{ item2.wind }}
+						
+																	</div>
+																	 </li>
+														    </ul>
+														 
+														</div>
+														
+													</div>
+									            <div class="modal-footer">
+									                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+									            </div>
+									        </div><!-- /.modal-content -->
+									    </div><!-- /.modal -->
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 日历完 -->
+						<!-- 灯箱 -->
+						<div class="tab-pane fade" id="lightbox">
+							<div id="box">
+								<div class="row">
+									<div class="col-md-3" data-toggle="modal" data-target=".img1Modal">
+										<img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2874656383,4212838519&fm=26&gp=0.jpg" class="paoma" />
+								    </div>
+									<div class="col-md-3" data-toggle="modal" data-target=".img2Modal">
+										<img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=328782225,868626492&fm=26&gp=0.jpg" class="paoma"/>
+									</div>
+									<div class="col-md-3" data-toggle="modal" data-target=".img3Modal">
+										<img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3349404429,1268442094&fm=26&gp=0.jpg" class="paoma"/>
+									</div>
+									<div class="col-md-3" data-toggle="modal" data-target=".img4Modal">
+										<img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2891141882,2106472932&fm=26&gp=0.jpg" class="paoma"/>
+									</div>
+							    </div>
+							</div>
+							<!-- 模态框（Modal） 需要多次使用模态框时在每个模态框外层包裹一个div就能正常切换了-->
+							<div>
+								<div class="modal fade img1Modal" id="buyModal" tabindex="-1" role="dialog" aria-labelledby="buyModalLabel" aria-hidden="true">
+								    <div class="modal-dialog">
+								        <div class="modal-content">
+								            <div class="modal-header">
+								                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+								                <h4 class="modal-title" id="myModalLabel">正确比例图：</h4>
+								            </div>
+								                <div class="modal-body">
+                                                    <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2874656383,4212838519&fm=26&gp=0.jpg" />
+												</div>
+								            <div class="modal-footer">
+								                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+								            </div>
+								        </div><!-- /.modal-content -->
+								    </div><!-- /.modal -->
+								</div>
+							</div>
+							<div>
+								<div class="modal fade img2Modal" tabindex="-1" role="dialog" aria-labelledby="buyModalLabel" aria-hidden="true">
+								    <div class="modal-dialog">
+								        <div class="modal-content">
+								            <div class="modal-header">
+								                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+								                <h4 class="modal-title" id="myModalLabel">正确比例图：</h4>
+								            </div>
+								                <div class="modal-body">
+							                        <img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=328782225,868626492&fm=26&gp=0.jpg" />
+												</div>
+								            <div class="modal-footer">
+								                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+								            </div>
+								        </div><!-- /.modal-content -->
+								    </div><!-- /.modal -->
+								</div>
+							</div>
+							<div>
+								<div class="modal fade img3Modal" tabindex="-1" role="dialog" aria-labelledby="buyModalLabel" aria-hidden="true">
+								    <div class="modal-dialog">
+								        <div class="modal-content">
+								            <div class="modal-header">
+								                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+								                <h4 class="modal-title" id="myModalLabel">正确比例图：</h4>
+								            </div>
+								                <div class="modal-body">
+							                        <img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3349404429,1268442094&fm=26&gp=0.jpg" />
+												</div>
+								            <div class="modal-footer">
+								                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+								            </div>
+								        </div><!-- /.modal-content -->
+								    </div><!-- /.modal -->
+								</div>
+							</div>
+							<div>
+								<div class="modal fade img4Modal" tabindex="-1" role="dialog" aria-labelledby="buyModalLabel" aria-hidden="true">
+								    <div class="modal-dialog">
+								        <div class="modal-content">
+								            <div class="modal-header">
+								                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+								                <h4 class="modal-title" id="myModalLabel">正确比例图：</h4>
+								            </div>
+								                <div class="modal-body">
+							                        <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2891141882,2106472932&fm=26&gp=0.jpg" />
+												</div>
+								            <div class="modal-footer">
+								                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+								            </div>
+								        </div><!-- /.modal-content -->
+								    </div><!-- /.modal -->
+								</div>
+							</div>
+						</div>
+						<!-- 灯箱完 -->
+						<!-- 别踩白块 -->
+						<!-- 别踩白块完 -->
+						<div class="tab-pane fade" id="whitebox">
+							<div  id="whitebox">
+								<!-- 点击开始的按钮 -->
+								<button id="whitebtn" class="btn-sm">开始游戏</button>
+								<div id="whitediv">
+									<div id="whitetable"></div>
+								</div>
+								<!-- 显示得分的span -->
+								<p>您的得分是：<span id="whitespan"></span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 定义公共组件 -->
+		<template id="tem">
+		
+		</template>
+		<script>
+			
+		</script>
+	</body>
+	
+</html>

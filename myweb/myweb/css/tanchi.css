@@ -1,0 +1,38 @@
+#mytanchi{
+	width: 800px;
+	height: 700px;
+	border: 1px solid grey;
+	margin: auto;
+	box-sizing: border-box;
+}
+
+.container{
+	margin-top: 50px;
+}
+
+#tanchitable{
+	width: 800px;
+	height: 650px;
+		box-sizing: border-box;
+}
+
+#tanchitable td{
+	border: 1px solid grey;
+	background-color: white;
+	/* padding: 0px; */
+	font-size: smaller;
+	width: 50px;
+}
+
+#tanchibtn{
+	float: right;
+}
+
+#backimg{
+	width: 100%;
+	/* background-image:url(../img/btris.jpg); */
+	background-repeat: no-repeat;
+	background-size:100% auto;
+}
+
+

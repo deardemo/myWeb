@@ -1,0 +1,35 @@
+#mybtris{
+	width: 400px;
+	height: 700px;
+	border: 1px solid grey;
+	margin: auto;
+	box-sizing: border-box;
+}
+
+.container{
+	margin-top: 50px;
+}
+
+#btristable{
+	width: 400px;
+	height: 650px;
+		box-sizing: border-box;
+}
+
+#btristable td{
+	border: 1px solid grey;
+	background-color: white;
+}
+
+#trisbtn{
+	float: right;
+}
+
+#backimg{
+	width: 100%;
+	background-image:url(../img/btris.jpg);
+	background-repeat: no-repeat;
+	background-size:100% auto;
+}
+
+
